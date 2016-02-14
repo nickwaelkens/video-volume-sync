@@ -1,4 +1,4 @@
-import debounce from 'lodash.debounce';
+import * as debounce from 'lodash/debounce';
 
 const DEFAULT_VOLUME = 0.5;
 const videos = [];
