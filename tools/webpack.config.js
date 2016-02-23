@@ -1,4 +1,5 @@
 import path from 'path';
+import webpack from 'webpack';
 
 const DEBUG = !process.argv.includes('--release');
 const VERBOSE = process.argv.includes('--verbose');
@@ -28,6 +29,14 @@ const config = {
   resolve: {
     extensions: ['', '.js', '.json'],
   },
+
+  plugins: DEBUG ? [] : [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        screw_ie8: true,
+      },
+    }),
+  ],
 
   module: {
     loaders: [

@@ -4,7 +4,8 @@
   "description": "This extension remembers and synchronises your volume for videos on Facebook in Chrome.",
   "main": "src/js/index.js",
   "scripts": {
-    "build": "babel-node tools/run build"
+    "build": "babel-node tools/run build",
+    "release": "npm run build -- --release"
   },
   "repository": {
     "type": "git",
