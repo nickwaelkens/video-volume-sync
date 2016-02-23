@@ -1,17 +1,13 @@
 /* eslint-disable no-console */
-
-const format = (time) => {
-  return time.toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, '$1');
-};
-
 const run = (fn, options) => {
+  const time = require('./lib/time').default;
   const task = typeof fn.default === 'undefined' ? fn : fn.default;
   const start = new Date();
-  console.log(`[${format(start)}] Starting '${task.name}'...`);
+  console.log(`[${time.format(start)}] Starting "${task.name}"`);
   return task(options).then(() => {
     const end = new Date();
-    const time = end.getTime() - start.getTime();
-    console.log(`[${format(end)}] Finished '${task.name}' after ${time} ms`);
+    const duration = end.getTime() - start.getTime();
+    console.log(`[${time.format(end)}] Finished "${task.name}" after ${duration}ms`);
   });
 };
 

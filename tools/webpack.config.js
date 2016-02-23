@@ -1,8 +1,11 @@
 import path from 'path';
 import webpack from 'webpack';
+import time from './lib/time';
 
 const DEBUG = !process.argv.includes('--release');
 const VERBOSE = process.argv.includes('--verbose');
+
+console.log(`[${time.format(new Date())}] Starting a`, DEBUG ? 'debug' : 'release', 'run');
 
 const config = {
   entry: './src/js/index.js',

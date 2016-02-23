@@ -3,7 +3,6 @@
 import webpack from 'webpack';
 import webpackConfig from './webpack.config';
 
-
 const bundle = () => {
   return new Promise((resolve, reject) => {
     webpack(webpackConfig).run((err, stats) => { // eslint-disable-line consistent-return
@@ -14,6 +13,6 @@ const bundle = () => {
       resolve();
     });
   });
-}
+};
 
 export default bundle;
