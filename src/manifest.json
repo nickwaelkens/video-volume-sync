@@ -11,7 +11,7 @@
         "*://*.facebook.com/*"
       ],
       "js": [
-        "js/extension.js"
+        "index.bundle.js"
       ]
     }
   ]
