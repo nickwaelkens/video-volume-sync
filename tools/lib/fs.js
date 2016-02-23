@@ -1,3 +1,5 @@
+/* eslint-disable no-confusing-arrow */
+
 import fs from 'fs';
 import mkdirp from 'mkdirp';
 
