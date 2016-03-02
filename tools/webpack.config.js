@@ -44,18 +44,23 @@ const config = {
   ],
 
   module: {
-    loaders: [
-      {
-        test   : /\.js$/,
-        loader : 'babel-loader',
-        include: [
-          path.resolve(__dirname, '../src/js'),
-        ],
-        query  : {
-          presets: ['es2015', 'stage-0'],
-        },
+    preLoaders: [{
+      test   : /\.js$/,
+      loader : 'eslint-loader',
+      include: [
+        path.resolve(__dirname, '../src/js'),
+      ],
+    }],
+    loaders   : [{
+      test   : /\.js$/,
+      loader : 'babel-loader',
+      include: [
+        path.resolve(__dirname, '../src/js'),
+      ],
+      query  : {
+        presets: ['es2015', 'stage-0'],
       },
-    ],
+    }],
   },
 };
 

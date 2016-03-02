@@ -5,6 +5,7 @@ async function copy() {
 
   await Promise.all([
     ncp('src/manifest.json', 'build/manifest.json'),
+    ncp('src/icons', 'build/icons'),
   ]);
 }
 
