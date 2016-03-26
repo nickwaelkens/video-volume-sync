@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Facebook Video Volume Sync",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This extension remembers and synchronises your volume for videos on Facebook.",
   "icons": {
     "48" : "icons/icon-48.png",
