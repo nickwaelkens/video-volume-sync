@@ -16,7 +16,9 @@
         "*://*.facebook.com/*"
       ],
       "js": [
-        "index.bundle.js"
+        "manifest.js",
+        "vendors.js",
+        "app.js"
       ]
     }
   ]
