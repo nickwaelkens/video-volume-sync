@@ -1,7 +1,7 @@
 {
-  "name": "facebook-video-volume-sync",
-  "version": "0.0.1",
-  "description": "This extension remembers and synchronises your volume for videos on Facebook in Chrome.",
+  "name": "video-volume-sync",
+  "version": "0.0.2",
+  "description": "Remember and synchronise your volume for videos on Facebook in Chrome.",
   "main": "src/js/index.js",
   "scripts": {
     "build": "babel-node tools/run build",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/nickwaelkens/facebook-video-volume-sync.git"
+    "url": "git+ssh://git@github.com/nickwaelkens/video-volume-sync.git"
   },
   "keywords": [
     "facebook",
@@ -19,9 +19,9 @@
   "author": "Nick Waelkens <hello@nickwaelkens.be>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nickwaelkens/facebook-video-volume-sync/issues"
+    "url": "https://github.com/nickwaelkens/video-volume-sync/issues"
   },
-  "homepage": "https://github.com/nickwaelkens/facebook-video-volume-sync#readme",
+  "homepage": "https://github.com/nickwaelkens/video-volume-sync#readme",
   "devDependencies": {
     "babel-core": "^6.4.5",
     "babel-eslint": "^5.0.0-beta10",
