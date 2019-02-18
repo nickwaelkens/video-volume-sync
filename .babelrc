@@ -1,6 +1,17 @@
 {
-    "presets": [
-        "es2015",
-        "stage-0"
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": [
+            "chrome > 60"
+          ]
+        }
+      }
     ]
+  ],
+  "plugins": [
+    "lodash"
+  ]
 }

@@ -12,7 +12,7 @@ pids
 coverage
 
 # Compiled extension
-build
+dist
 
 # Dependency directory
 node_modules

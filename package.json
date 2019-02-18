@@ -1,48 +1,40 @@
 {
   "name": "video-volume-sync",
-  "version": "0.0.2",
   "description": "Remember and synchronise your volume for videos on Facebook in Chrome.",
-  "main": "src/js/index.js",
-  "scripts": {
-    "build": "babel-node tools/run build",
-    "release": "npm run build -- --release"
+  "version": "0.0.2",
+  "author": "Nick Waelkens <hi@nick.plus>",
+  "bugs": {
+    "url": "https://github.com/nickwaelkens/video-volume-sync/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/nickwaelkens/video-volume-sync.git"
+  "dependencies": {
+    "lodash": "^4.5.0"
   },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-lodash": "^3.3.4",
+    "lodash-webpack-plugin": "^0.11.5",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  },
+  "homepage": "https://github.com/nickwaelkens/video-volume-sync#readme",
   "keywords": [
     "facebook",
     "video",
     "volume"
   ],
-  "author": "Nick Waelkens <hello@nickwaelkens.be>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nickwaelkens/video-volume-sync/issues"
+  "main": "src/js/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nickwaelkens/video-volume-sync.git"
   },
-  "homepage": "https://github.com/nickwaelkens/video-volume-sync#readme",
-  "devDependencies": {
-    "babel-core": "^6.4.5",
-    "babel-eslint": "^5.0.0-beta10",
-    "babel-loader": "^6.2.2",
-    "babel-plugin-transform-runtime": "^6.5.2",
-    "babel-preset-es2015": "^6.5.0",
-    "babel-preset-stage-0": "^6.5.0",
-    "bluebird": "^3.3.1",
-    "cpx": "^1.2.1",
-    "del": "^2.2.0",
-    "eslint": "^2.2.0",
-    "eslint-config-airbnb": "^6.0.0",
-    "eslint-loader": "^1.3.0",
-    "eslint-plugin-react": "^4.0.0",
-    "mkdirp": "^0.5.1",
-    "ncp": "^2.0.0",
-    "npm-run-all": "^1.5.1",
-    "rimraf": "^2.5.2",
-    "webpack": "^2.0.7-beta"
-  },
-  "dependencies": {
-    "lodash": "^4.5.0"
+  "scripts": {
+    "build": "rm -rf dist/ && webpack -p --mode development --env development && npm run copy:assets",
+    "release": "rm -rf dist/ && webpack -p --mode production --env production && npm run copy:assets",
+    "copy:assets": "cp ./src/manifest.json ./dist/manifest.json && cp -R ./src/icons ./dist/icons"
   }
 }
