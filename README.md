@@ -1,2 +1,5 @@
-# Facebook Video Volume Sync
-This extension remembers and synchronises your volume for videos on Facebook in Chrome. Yay! :loudspeaker:
+# Video Volume Sync :loudspeaker:
+
+This extension remembers and synchronises your volume for videos on Facebook in Chrome.
+
+https://chrome.google.com/webstore/detail/video-volume-sync/anajobmkmeloldjnafmhbkpbfikmoeab
