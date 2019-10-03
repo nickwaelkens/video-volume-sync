@@ -1,7 +1,7 @@
 {
   "name": "video-volume-sync",
   "description": "Remember and synchronise the volume for videos on Facebook.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Nick Waelkens <hi@nick.plus>",
   "bugs": {
     "url": "https://github.com/nickwaelkens/video-volume-sync/issues"
