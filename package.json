@@ -31,8 +31,8 @@
     "url": "git+ssh://git@github.com/nickwaelkens/video-volume-sync.git"
   },
   "scripts": {
-    "build": "rm -rf dist/ && webpack -p --mode development --env development && npm run copy:assets",
-    "release": "rm -rf dist/ && webpack -p --mode production --env production && npm run copy:assets",
-    "copy:assets": "cp ./src/manifest.json ./dist/manifest.json && cp -R ./src/icons ./dist/icons"
+    "build": "NODE_ENV=development rm -rf dist/ && webpack -p --mode development && NODE_ENV=development npm run copy:assets",
+    "release": "NODE_ENV=production rm -rf dist/ && webpack -p --mode production && NODE_ENV=production npm run copy:assets",
+    "copy:assets": "node ./bin/create-manifest && cp -R ./src/icons ./dist/icons"
   }
 }
