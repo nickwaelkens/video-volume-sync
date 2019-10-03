@@ -11,7 +11,7 @@ export default (environment = 'development') => {
 
   const webpackConfig = {
     entry: {
-      app: ['@babel/polyfill', ...APP_ENTRY],
+      app: APP_ENTRY,
     },
     output: {
       filename: '[name].js',
