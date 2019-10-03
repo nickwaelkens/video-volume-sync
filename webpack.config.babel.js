@@ -2,7 +2,7 @@ import path from 'path';
 
 const resolvePath = (...args) => path.resolve(path.resolve(__dirname), ...args);
 const resolveClientPath = (pathName = '') => resolvePath('src', pathName);
-const APP_ENTRY = resolveClientPath('index.js');
+const APP_ENTRY = resolveClientPath('index.ts');
 
 const __DEV__ = process.env.NODE_ENV === 'development';
 
@@ -17,11 +17,14 @@ export default {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         include: [resolveClientPath()],
         use: ['babel-loader'],
       },
     ],
+  },
+  resolve: {
+    extensions: ['.js', '.ts'],
   },
   devtool: __DEV__ ? 'inline-source-map' : false,
   optimization: {
