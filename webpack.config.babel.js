@@ -1,13 +1,13 @@
-  import path from 'path';
+import path from 'path';
 
 const resolvePath = (...args) => path.resolve(path.resolve(__dirname), ...args);
 const resolveClientPath = (pathName = '') => resolvePath('src', pathName);
+const APP_ENTRY = resolveClientPath('index.js');
 
 export default (environment = 'development') => {
   const __DEV__ = environment === 'development';
-  const APP_ENTRY = [resolveClientPath('index.js')];
 
-  const webpackConfig = {
+  return {
     entry: {
       app: APP_ENTRY,
     },
@@ -41,6 +41,4 @@ export default (environment = 'development') => {
       },
     },
   };
-
-  return webpackConfig;
 };
