@@ -3,15 +3,9 @@
     [
       "@babel/preset-env",
       {
-        "targets": {
-          "browsers": [
-            "chrome > 60"
-          ]
-        }
+        "useBuiltIns": "usage",
+        "corejs": 3
       }
     ]
-  ],
-  "plugins": [
-    "lodash"
   ]
 }

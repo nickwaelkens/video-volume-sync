@@ -1,5 +1,5 @@
 import chromeStorage from './chrome-storage';
-import { debounce } from 'lodash';
+import debounce from 'lodash.debounce';
 
 let desiredVolume = 0.5;
 let allVideos = [...document.getElementsByTagName('video')];
