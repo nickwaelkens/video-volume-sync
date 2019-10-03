@@ -1,6 +1,4 @@
-import webpack from 'webpack';
-import LodashModuleReplacementPlugin from 'lodash-webpack-plugin';
-import path from 'path';
+  import path from 'path';
 
 const resolvePath = (...args) => path.resolve(path.resolve(__dirname), ...args);
 const resolveClientPath = (pathName = '') => resolvePath('src', pathName);
@@ -42,9 +40,6 @@ export default (environment = 'development') => {
         name: 'manifest',
       },
     },
-    plugins: [
-      new LodashModuleReplacementPlugin(),
-    ],
   };
 
   return webpackConfig;
