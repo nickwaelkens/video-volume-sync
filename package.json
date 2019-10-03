@@ -12,9 +12,13 @@
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.6.2",
-    "@babel/register": "^7.0.0",
+    "@babel/preset-typescript": "^7.6.0",
+    "@babel/register": "^7.6.2",
+    "@types/chrome": "0.0.89",
+    "@types/lodash.debounce": "^4.0.6",
     "babel-loader": "^8.0.5",
     "core-js": "^3.2.1",
+    "typescript": "^3.6.3",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
   },
@@ -25,14 +29,15 @@
     "volume"
   ],
   "license": "MIT",
-  "main": "src/js/index.js",
+  "main": "src/js/index.ts",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/nickwaelkens/video-volume-sync.git"
   },
   "scripts": {
-    "build": "NODE_ENV=development rm -rf dist/ && webpack -p --mode development && NODE_ENV=development npm run copy:assets",
-    "release": "NODE_ENV=production rm -rf dist/ && webpack -p --mode production && NODE_ENV=production npm run copy:assets",
-    "copy:assets": "node ./bin/create-manifest && cp -R ./src/icons ./dist/icons"
+    "build": "NODE_ENV=development rm -rf dist/ && webpack -p --mode development; NODE_ENV=development npm run copy:assets",
+    "release": "NODE_ENV=production rm -rf dist/ && webpack -p --mode production; NODE_ENV=production npm run copy:assets",
+    "copy:assets": "node ./bin/create-manifest && cp -R ./src/icons ./dist/icons",
+    "check-types": "tsc --pretty"
   }
 }
